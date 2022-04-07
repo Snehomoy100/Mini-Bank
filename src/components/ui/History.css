@@ -1,0 +1,116 @@
+.required-field::after {
+    content: "*";
+    color: red;
+    margin-left:2px
+  }
+  .required-field-dark::after {
+    content: "*";
+    color: #CF6679;
+    margin-left:2px
+  }
+  table { 
+  width: 750px; 
+  border-collapse: collapse; 
+  margin:50px auto;
+  }
+  
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+  background: #eee; 
+  }
+  
+  th { 
+  background: rgb(67, 63, 63); 
+  color: white; 
+  font-weight: bold; 
+  }
+  
+  td, th { 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+  font-size: 18px;
+  }
+  
+  /* 
+  Max width before this PARTICULAR table gets nasty
+  This query will take effect for any screen smaller than 760px
+  and also iPads specifically.
+  */
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  body {
+    margin-left:20px;
+    margin-right: 20px;
+  }
+  
+  table { 
+      width: 100%; 
+    font-size: 1rem;
+  }
+  
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+  
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    font-size: 1rem;
+  }
+  
+  tr { border: 1px solid #ccc; }
+  
+  td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+  
+    color: #000;
+    font-weight: bold;
+  }
+  
+  }
+  .create{
+  display: block;
+    justify-content: center;
+    margin-top: 100px;
+  margin-bottom: 100px;
+  }
+  .para{
+  font-size: 1.9rem;
+    font-weight: 700;
+    text-align: center;
+  text-transform: uppercase;
+  }
+  /* input[type=text],input[type=number], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  } */
