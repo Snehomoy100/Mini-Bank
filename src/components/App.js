@@ -4,12 +4,12 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import CreateUser from './CreateUser';
 import History from './History';
 import Transfer from './Transfer';
-import Footer from './ui/Footer';
-import Header from './ui/Header';
-import theme from "./ui/Theme";
+import Footer from './uiLayout/Footer';
+import Header from './uiLayout/Header';
+import theme from "./uiLayout/Theme";
 import Users from './Users';
 // import './ui/App.css'
-import './ui/History.css'
+import './uiLayout/History.css'
 import LandingPage from './LandingPage';
 
 
