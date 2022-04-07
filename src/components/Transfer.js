@@ -81,7 +81,6 @@ export default function  Transfer(){
           status: status,
           time:  moment().valueOf().toString()
       })
-      // .then(() => { alert("Details have been saved") }).catch((error) => { alert(error.message) });
   }
 
 const transferMoney = async (e)=>{
