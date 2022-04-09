@@ -39,7 +39,7 @@ export default createTheme({
         lineHeight:1.5
       },
       h3: {
-        fontFamily: "Pacifico",
+        fontFamily: "Roboto",
         fontSize: "2.5rem",
         color: arcPurple
       },
