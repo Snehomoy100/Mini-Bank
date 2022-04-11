@@ -8,6 +8,7 @@ import Footer from './uiLayout/Footer';
 import Header from './uiLayout/Header';
 import theme from "./uiLayout/Theme";
 import Users from './Users';
+import HomePage from './HomePage';
 // import './ui/App.css'
 import './uiLayout/History.css'
 import LandingPage from './LandingPage';
@@ -26,6 +27,15 @@ function App() {
           />
           <Switch>
           <Route exact path='/'  
+          render={(props)=>(
+                <HomePage
+                  {...props} 
+                  setValue={setValue}
+                  setSelectedIndex={setSelectedIndex}
+                />
+              )} 
+            />
+          <Route exact path='/homepage'  
           render={(props)=>(
                 <LandingPage
                   {...props} 
