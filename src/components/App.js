@@ -20,22 +20,23 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
+        
         <Header value={value}
           setValue={setValue}
           selectedIndex={selectedIndex}
           setSelectedIndex={setSelectedIndex}
           />
           <Switch>
-          <Route exact path='/'  
-          render={(props)=>(
-                <HomePage
-                  {...props} 
-                  setValue={setValue}
-                  setSelectedIndex={setSelectedIndex}
-                />
-              )} 
-            />
-          <Route exact path='/homepage'  
+          <Route exact path='/' 
+            render={(props)=>(
+              <HomePage
+                {...props} 
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
+          {/* <Route exact path='/landingpage'  
           render={(props)=>(
                 <LandingPage
                   {...props} 
@@ -43,7 +44,7 @@ function App() {
                   setSelectedIndex={setSelectedIndex}
                 />
               )} 
-            />
+            /> */}
           <Route exact path='/users'  
               render={(props)=>(
                 <Users

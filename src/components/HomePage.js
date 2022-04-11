@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme=>({
 
 }))
 
-export default function LandingPage(props){
+export default function HomePage(props){
     const classes = useStyles();
 
     const theme = useTheme();
@@ -86,9 +86,10 @@ export default function LandingPage(props){
                     <Grid item>
                     <Grid item align='center' style={{marginBottom:'3em'}}>
                         <Button variant='contained' className={classes.estimateButton}  
-                                component={Link} to='/homepage'
-                                style={{color:'white'}}
                                 onClick = {signInWithGoogle}
+                                component={Link}
+                                to='/create'
+                                style={{color:'white'}}
                         >
                         Sign in with Google
                         </Button>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'
 import { db } from '../firebase';
 import { makeStyles} from '@material-ui/core/styles';
 import { TextField ,Button,Grid,Typography,useMediaQuery,useTheme} from "@material-ui/core";
@@ -233,6 +234,9 @@ const onAmountChange = (e) => {
                             }
                         variant='contained' 
                         className={classes.sendButton}
+                        component={Link}
+                        to='/history'
+                        style={{color:'white'}}
                         onClick={transferMoney}
                     >
                          {loading ? <CircularProgress size={30} /> : buttonContents}
